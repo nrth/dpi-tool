@@ -23,3 +23,12 @@ function calc() {
   document.getElementById("edpi").value = round(edpi, 0);
   document.getElementById("cm180").value = round(cm180, 2);
 }
+
+function toggleAdvanced() {
+  var adv = document.getElementById("advanced");
+  if(adv.style.display == "block") {
+    adv.style.display = "none";
+  } else {
+    adv.style.display = "block";
+  }
+}

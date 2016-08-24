@@ -1,0 +1,7 @@
+$fg-color: #CCC;
+$bg-color: #2C353E;
+
+$base-background-color: lighten($bg-color, 5);
+$base-border: 1px solid lighten($bg-color, 10);
+$base-font-color: lighten($bg-color, 70);
+$action-color: lighten($bg-color, 20);

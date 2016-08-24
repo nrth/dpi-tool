@@ -37,6 +37,8 @@ select[multiple] {
   padding: $base-spacing / 3;
   transition: border-color $base-duration $base-timing;
   width: 100%;
+  color: $base-font-color;
+  font-weight: bold;
 
   &:hover {
     border-color: shade($base-border-color, 20%);

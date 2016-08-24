@@ -3,58 +3,63 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DPI Calculator</title>
+    <meta name="description" content="Mouse DPI/Sensitivity Calculator and more...">
+    <meta name="keywords" content="Mouse, DPI, Sensitivity, Calculator, Tool, eDPI">
+    <title>Mouse DPI/Sensitivity Calculator</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <div id="app">
-      <label>
-        Current DPI
+      <header>
+        <h1>Mouse DPI/Sensitivity Calculator</h1>
+      </header>
+      <div class="parameters">
+        <label for="cdpi">Current DPI</label>
         <input id="cdpi" type="number" min="0" step="50" />
-      </label>
-      <label>
-        Current Sensitivity
+
+        <label for="sens">Current Sensitivity</label>
         <input id="sens" type="number" min="0" max="1000.000000" step="0.01" />
-      </label>
-      <label>
-        Target DPI
+
+        <label for="tdpi">Target DPI</label>
         <input id="tdpi" type="number" min="0" step="50" />
-      </label>
-      <label>
-        m_jaw
-        <input id="jaw" type="number" min="0" value="0.022" step="0.001" />
-      </label>
-      <label>
-        Windows
-        <select id="windows">
-          <option value="0.0625">1/11</option>
-          <option value="0.0125">2/11</option>
-          <option value="0.2500">3/11</option>
-          <option value="0.5000">4/11</option>
-          <option value="0.7500">5/11</option>
-          <option value="1.0000" selected>6/11 (default)</option>
-          <option value="1.5000">7/11</option>
-          <option value="2.0000">8/11</option>
-          <option value="2.5000">9/11</option>
-          <option value="3.0000">10/11</option>
-          <option value="3.5000">11/11</option>
-        </select>
-      </label>
-      <div>
+
+        <button class="advbutton" onclick="toggleAdvanced()">Advanced Settings</button>
+        <div id="advanced" class="advanced">
+          <label for="jaw">m_jaw</label>
+          <input id="jaw" type="number" min="0" value="0.022" step="0.001" />
+
+          <label for="windows">Windows</label>
+          <select id="windows">
+            <option value="0.0625">1/11</option>
+            <option value="0.0125">2/11</option>
+            <option value="0.2500">3/11</option>
+            <option value="0.5000">4/11</option>
+            <option value="0.7500">5/11</option>
+            <option value="1.0000" selected>6/11 (default)</option>
+            <option value="1.5000">7/11</option>
+            <option value="2.0000">8/11</option>
+            <option value="2.5000">9/11</option>
+            <option value="3.0000">10/11</option>
+            <option value="3.5000">11/11</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="action">
         <button onclick="calc()">Calculate</button>
       </div>
-      <label>
-        Result
+
+      <div class="result">
+        <label for="result">Result</label>
         <input id="result" type="number" readonly />
-      </label>
-      <label>
-        True DPI (eDPI)
+
+        <label for="edpi">True DPI (eDPI)</label>
         <input id="edpi" type="number" readonly />
-      </label>
-      <label>
-        cm / 180&deg;
+
+        <label for="cm180">cm / 180&deg;</label>
         <input id="cm180" type="number" readonly />
-      </label>
+      </div>
+
     </div>
     <script type="text/javascript" src="js/dpi.js"></script>
   </body>

@@ -1,2 +1,64 @@
 @import "bourbon/bourbon";
 @import "base/base";
+
+$font-stack: sans-serif;
+
+html, body {
+  font: 100% $font-stack;
+  color: $fg-color;
+  background-color: $bg-color;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  header {
+    width: 100%;
+    background-color: darken($bg-color, 10);
+    font-size: 1.5rem;
+    height: 3rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+
+    h1 {
+      margin-left: 1rem;
+      color: lighten($bg-color, 70);
+      line-height: 2;
+    }
+  }
+}
+
+label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.parameters, .action, .result {
+  margin: 1rem;
+  max-width: 25rem;
+}
+
+.advanced {
+  margin-left: 1rem;
+  border: 1px dotted lighten($bg-color, 10);
+  padding: 1rem 1rem 0 1rem;
+  display: none;
+}
+
+.advbutton {
+  font-size: 0.6rem;
+  background-color: darken($action-color, 10);
+  margin-bottom: .5rem;
+  &:hover {
+    border-color: shade($action-color, 20%);
+  }
+  &:focus, &:active {
+    border: 0;
+    outline: 0;
+  }
+}
+
+.action {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
