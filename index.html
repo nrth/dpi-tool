@@ -20,6 +20,26 @@
         Target DPI
         <input id="tdpi" type="number" step="50" />
       </label>
+      <label>
+        m_jaw
+        <input id="jaw" type="number" value="0.022" />
+      </label>
+      <label>
+        Windows
+        <select id="windows">
+          <option value="0.0625">1/11</option>
+          <option value="0.0125">2/11</option>
+          <option value="0.2500">3/11</option>
+          <option value="0.5000">4/11</option>
+          <option value="0.7500">5/11</option>
+          <option value="1.0000" selected>6/11 (default)</option>
+          <option value="1.5000">7/11</option>
+          <option value="2.0000">8/11</option>
+          <option value="2.5000">9/11</option>
+          <option value="3.0000">10/11</option>
+          <option value="3.5000">11/11</option>
+        </select>
+      </label>
       <div>
         <button onclick="calc()">Calculate</button>
       </div>
