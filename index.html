@@ -7,7 +7,35 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <h1>DPI Calculator</h1>
+    <div id="app">
+      <label>
+        Current DPI
+        <input id="cdpi" type="number" step="50" />
+      </label>
+      <label>
+        Current Sensitivity
+        <input id="sens" type="number" step="50" />
+      </label>
+      <label>
+        Target DPI
+        <input id="tdpi" type="number" step="50" />
+      </label>
+      <div>
+        <button onclick="calc()">Calculate</button>
+      </div>
+      <label>
+        Result
+        <input id="result" type="number" readonly />
+      </label>
+      <label>
+        True DPI (eDPI)
+        <input id="edpi" type="number" readonly />
+      </label>
+      <label>
+        cm / 180&deg;
+        <input id="cm180" type="number" readonly />
+      </label>
+    </div>
     <script type="text/javascript" src="js/dpi.js"></script>
   </body>
 </html>
