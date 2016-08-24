@@ -10,6 +10,11 @@ function calc() {
   let jaw = document.getElementById("jaw").value;
   let windows = document.getElementById("windows").value;
 
+  if(cdpi == 0 || tdpi == 0 || sens == 0 || jaw == 0) {
+    alert('Invalid value, DPI/Sensitivity/Jaw can not be zero.');
+    return;
+  }
+
   let result = sens/(tdpi/cdpi) * windows;
   let edpi = tdpi * result;
   let cm180  = ((180 / jaw) / edpi) * 2.54;
