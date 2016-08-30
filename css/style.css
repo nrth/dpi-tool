@@ -184,7 +184,7 @@ html, body {
   width: 100%;
   background-color: #171c20;
   font-size: 1.5rem;
-  height: 3rem;
+  font-size: 3vh;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); }
   #app header h1 {
     margin-left: 1rem;

@@ -15,8 +15,8 @@ html, body {
   header {
     width: 100%;
     background-color: darken($bg-color, 10);
-    font-size: 1.5rem;
-    height: 3rem;
+    font-size: 1.5rem; // fallback
+    font-size: 3vh;
     box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 
     h1 {
