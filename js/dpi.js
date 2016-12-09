@@ -25,10 +25,6 @@ function calc() {
 }
 
 function toggleAdvanced() {
-  var adv = document.getElementById("advanced");
-  if(adv.style.display == "block") {
-    adv.style.display = "none";
-  } else {
-    adv.style.display = "block";
-  }
+  let adv = document.getElementById("advanced");
+  adv.style.display = (adv.style.display == "block") ? "none" : "block";
 }
